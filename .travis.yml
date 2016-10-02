@@ -1,0 +1,19 @@
+language: java
+os:
+- linux
+- osx
+env:
+  global:
+  - THIS_PACKAGE=cca-bocca
+  - BUILD_STR="dev"
+  - TRAVIS_PYTHON_VERSION="2.7"
+  - NUMPY_VERSION="1.9"
+  - secure: FJUw3CRnfsvr0C1oxhKqhprQsdYBt2yXx6LgGEL9g4cl2eVfmfIAjQcs5pw3zhcNvGCfEJIIwcOJnKB1cFy6YLg1mmjGCbsU3taQMtOBjFILDXKBX/pHhk7JhOATaPlnzv3WPPjgl8Qb4ZADPGGnjHZQh/kVphmBO/JeCKH+43CfXzmkNZfg+8k8tdpB/dvHZOkojxVmmIbNFXenJ9bGQ3tbLx4EHmsoP76nR1a5kI8NyVJJsT07qVGQ9ywOlhV4wkCoCq4CGF8toMZLpfP0PJ/XmodUybKc3r+9Z0yIkAJx/F8fvvAm5QE9z8VFvt70KRlBAdv7RY0JtKG2/NiSezKVrzvQC31GTfD8ZHcF4YlpbjgZk/6Vix0WraIV6wDNpgrGestYMARsCcpRWJBkc/b6vxrbzkijS4eXgtNmFGiqnIu5bfcWZiVfcLJyOAoUS/W9J+6A1tlqbjRTiYS9wP02IbsrG5E1k+n6e4LgRmiRliwuprkLWYDUhZET1ecX6wW4FeCytRqdOoIarKgNgmXKJVN5cUtfnPBMCGDfXTeDl2E9sWhFo3gioKE+4fBtxJIzarlGx9BqWUFvkWJb+xj17xW825id563kUacKpLv8qXFYZP4e8t4Gm4cKbfe7sOIOjSh/xmk3FMhHNcJn/uuCws04zNrntXylT+a3hZ4=
+sudo: false
+install:
+- bash ci/travis/install_python.sh $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+script:
+- conda build recipe -c conda-forge -c csdms/channel/dev -c csdms
+after_success:
+- bash ci/travis/deploy_to_anaconda.sh $THIS_PACKAGE
