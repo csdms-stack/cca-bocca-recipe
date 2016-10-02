@@ -1,0 +1,28 @@
+{% set name = "cca-bocca" %}
+{% set version = "0.5.7" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/csdms/{{ name }}
+  patches:
+    - configure-input.patch
+    - fix-config-sub.patch
+
+requirements:
+  build:
+    - python
+    - cca-babel
+    - cca-spec-babel
+    - ccaffeine
+  run:
+    - python
+    - cca-babel
+    - cca-spec-babel
+    - ccaffeine
+
+build:
+  number: 0
+  string: {{ environ.get('GIT_BUILD_STR', '') }}
