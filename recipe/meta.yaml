@@ -13,15 +13,17 @@ source:
 
 requirements:
   build:
-    - python
-    - cca-babel
+    - python >=2.7.13
+    - numpy x.x
+    - cca-babel <2
     - cca-spec-babel
     - ccaffeine
   run:
-    - python
-    - cca-babel
+    - python >=2.7.13
+    - numpy x.x
+    - cca-babel <2
     - cca-spec-babel
     - ccaffeine
 
 build:
-  number: 0
+  number: 1
