@@ -35,5 +35,7 @@ script:
 after_success:
 - curl https://raw.githubusercontent.com/csdms/ci-tools/master/anaconda_upload.py
   > $HOME/anaconda_upload.py
-- echo $ANACONDA_TOKEN | python $HOME/anaconda_upload.py ./recipe --channel=main --org=csdms-stack
-  --old-build-string --token=-
+- |
+  if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+    echo $ANACONDA_TOKEN | python $HOME/anaconda_upload.py ./recipe --channel=main --org=csdms-stack --old-build-string --token=-
+  fi
