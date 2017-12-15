@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LANGS="c cxx f77 f90 python java"
+LANGS="c cxx f77 f90 python"
 
 bocca create project test
 cd test
