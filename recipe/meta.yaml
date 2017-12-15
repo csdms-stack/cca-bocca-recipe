@@ -13,14 +13,9 @@ source:
 
 requirements:
   build:
-    - python >=2.7.13
-    - numpy x.x
-    - cca-babel <2
-    - cca-spec-babel
-    - ccaffeine
+    - python <3
   run:
-    - python >=2.7.13
-    - numpy x.x
+    - python <3
     - cca-babel <2
     - cca-spec-babel
     - ccaffeine
