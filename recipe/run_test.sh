@@ -8,3 +8,6 @@ cd test
 for lang in $LANGS; do
   bocca create component $lang --language=$lang
 done
+
+./configure --prefix=$(pwd)/_inst
+make all install
