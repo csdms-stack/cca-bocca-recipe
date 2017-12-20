@@ -1,5 +1,7 @@
 language: generic
+filter_secrets: false
 os:
+- linux
 - osx
 env:
   global:
