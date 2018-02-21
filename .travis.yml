@@ -6,7 +6,7 @@ os:
 env:
   global:
   - CONDA_PREFIX=$HOME/miniconda
-  - MINICONDA_URL_BASE="https://repo.continuum.io/miniconda/Miniconda3-latest"
+  - MINICONDA_URL_BASE="https://repo.continuum.io/miniconda/Miniconda2-latest"
   - TRAVIS_PYTHON_VERSION="2.7"
   - secure: T24mS/wZR/bxmgYiEAsHv1s0Imb2a4D5Tdl+xL1Jnmqm5BI4gIoz1St114zso6Xu+7ACF2a2++GW7NUcjqZrG7lflm+fZ0IodgNlugwJk9tTDIopT6wILQ5u3FgZ0LlonEugfxTB2tXtF6vxlvITryRtm7M2cMiRoLDVI3J8XaUSXT63KZzYtvR+UTd7Lkcc57XgTJbujEa7oV6evuFphNqmCNywFL0PxTo56hP4dfsizIRnpEWnbxzCBTo1sgqChjxuweOdHJRX+31SsBrmR6IdUp9Tx09jHKIYP/MX4CgUi5mb9PQjjlPZKQsjtT0bqoLjNSXssYYzQUU37lzPp0hyUl4LLG69vk+y7FUb0aNxlxF2YVfNWvhLYfIcwfe4Itug6Ome6kVT+VAMPqZ2LESLYNV44d/DrLJFTf5mjioSBURPYz+E82P3sFGGIlkZgF9BqTjkotc2nAqO9jKy8b8mrXIJDAXGQp8pl3yvECiVUVFoSwfKfAPDmGkDDH9zm18Q405R0KYPOgGFBkeTU7b2r0vpkOaR1GSR+eBVYx8DfR6BBaUZjOsDDx2DDk6K2HllmV/pgsJ/g9R7jhHsu+VUN4NiHVBEyMiTRmDDBhY5IFbURgQEkPccIUvNELDN7h+/0uKsrLOOU0NnCYF7qckvIaTxL37Jizd0uxXzKF4=
 sudo: false
